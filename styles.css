@@ -1,0 +1,10 @@
+.navigation-menu {
+    height: 74px;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
