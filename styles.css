@@ -9,14 +9,40 @@
     width: 100%;
     margin: 0 auto 0 auto;
 }
-.zagolovok{
+.header-title{
     height: 286px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
-.navigation_menu, .navigation_menu-footer{
+.zagolovok{
+    position: relative;  
+    width: 498px;
+    height: 51px;
+    top: -7px;
+    font-family: Lora;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+.podzagolovok{
+    width: 504px;
+    height: 20px;
+    display: block;
+    font-family: Oxygen;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    opacity: 0.63;
+ 
+}
+.navigation_menu {
     height: 74px;
     width: 940px;
     margin-left: auto;
@@ -27,6 +53,15 @@
     justify-content: space-between;  
 }
 .navigation-menu-elements, .navigation-menu-elements-footer{
+    width: 376px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navigation-menu-elements-footer{
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+.elementsOfMenu{
     text-transform: uppercase;
     font-family: Oxygen;
     font-size: 11px;
@@ -39,8 +74,17 @@
 
 .escape{
     display: flex;
+    
 }
-
+.escape-footer{
+    opacity: 0.6;
+    color: #FFFFFF;
+    font-family: Oxygen;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+}
 .main-text-poz {
     width: 960px;
     height: 1431px;
