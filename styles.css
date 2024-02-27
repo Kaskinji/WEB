@@ -9,14 +9,14 @@
     width: 100%;
     margin: 0 auto 0 auto;
 }
-.header-title{
+.header-title {
     height: 286px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.zagolovok{
+.zagolovok {
     position: relative;  
     width: 498px;
     height: 51px;
@@ -29,7 +29,7 @@
     text-align: center;
     
 }
-.podzagolovok{
+.podzagolovok {
     width: 504px;
     height: 20px;
     display: block;
@@ -52,16 +52,16 @@
     align-items: center;
     justify-content: space-between;  
 }
-.navigation-menu-elements, .navigation-menu-elements-footer{
+.navigation-menu-elements, .navigation-menu-elements-footer {
     width: 376px;
     display: flex;
     justify-content: space-evenly;
 }
-.navigation-menu-elements-footer{
+.navigation-menu-elements-footer {
     color: #FFFFFF;
     opacity: 0.6;
 }
-.elementsOfMenu{
+.elementsOfMenu {
     text-transform: uppercase;
     font-family: Oxygen;
     font-size: 11px;
@@ -72,7 +72,7 @@
     display: flex;
 }
 
-.escape{
+.escape {
     display: flex;
     width: 92px;
     Height: 26px;
@@ -82,7 +82,7 @@
     line-height: 26px;
     font-family: Lora;
 }
-.escape-footer{
+.escape-footer {
     display: flex;
     opacity: 0.6;
     width: 92px;
@@ -95,7 +95,7 @@
     line-height: 26px;
     letter-spacing: 0.6px;
 }
-.main-image img{
+.main-image img {
     width: 100%;
     height: 100%;
 }
@@ -107,7 +107,7 @@
     margin-right: auto;
     margin-bottom: 135px;    
 }
-.main-text{
+.main-text {
     font-family: "Oxygen", sans-serif;
     font-size: 24px;
     font-weight: 400;
@@ -116,7 +116,7 @@
     text-align: left;
     color: #101315;
 }
-.footer{
+.footer {
     position: relative;
     z-index: 1;
     height: 90px;
@@ -124,7 +124,7 @@
     background-image: url("images/img-footer.jpg");
     background-repeat: no-repeat;
 }
-.footer-menu{
+.footer-menu {
     position: relative;
     z-index: 2;
     height: inherit;
