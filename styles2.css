@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.main {
+.all {
     background-color: #f7f7f7;
     display: block;
     width: 100%;
@@ -16,17 +16,20 @@
     justify-content: center;
     align-items: center;
 }
-h1 {
+.h1 {
     position: relative;  
     width: 498px;
     height: 51px;
+    top: -7px;
     font-family: Lora;
     font-size: 50px;
     font-weight: 400;
     line-height: 51px;
-    text-align: center; 
+    letter-spacing: 2px;
+    text-align: center;
+    
 }
-h2 {
+.h2 {
     width: 504px;
     height: 20px;
     display: block;
@@ -37,8 +40,8 @@ h2 {
     letter-spacing: 0em;
     text-align: center;
     opacity: 0.63;
+ 
 }
-
 .navigation_menu {
     height: 74px;
     width: 940px;
@@ -53,7 +56,6 @@ h2 {
     width: 376px;
     display: flex;
     justify-content: space-evenly;
-    list-style-type: none;
 }
 .navigation-menu-elements-footer {
     color: #FFFFFF;
@@ -61,7 +63,7 @@ h2 {
 }
 .elementsOfMenu {
     text-transform: uppercase;
-    font-family: "Oxygen", sans-serif;
+    font-family: Oxygen;
     font-size: 11px;
     font-weight: 400;
     line-height: 20px;
@@ -69,8 +71,28 @@ h2 {
     text-align: left;
     display: flex;
 }
+
+.escape {
+    display: flex;
+    width: 92px;
+    Height: 26px;
+    Top: 3px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    font-family: Lora;
+}
 .escape-footer {
-  opacity: 0.6;
+    display: flex;
+    opacity: 0.6;
+    width: 92px;
+    Height: 26px;
+    Top: 3px;
+    color: #ffffff;
+    font-family: Lora;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 26px;
 }
 .main-image img {
     width: 100%;
@@ -85,10 +107,11 @@ h2 {
     margin-bottom: 135px;    
 }
 .main-text {
-    font-family: "Oxygen", "sans-serif";
+    font-family: "Oxygen", sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 35px;
+    letter-spacing: 0em;
     text-align: left;
     color: #101315;
 }
