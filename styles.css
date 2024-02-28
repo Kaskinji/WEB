@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
 }
+
 h1 {
     position: relative;  
     width: 498px;
@@ -26,6 +27,7 @@ h1 {
     line-height: 51px;
     text-align: center; 
 }
+
 h2 {
     width: 504px;
     height: 20px;
