@@ -3,46 +3,79 @@
     padding: 0;
     box-sizing: border-box;
 }
-.all {
-    background-color: #f7f7f7;
-    display: block;
+.header {
+    background-image: url(images/IMAGE-lab2-desert.jpg);
     width: 100%;
-    margin: 0 auto 0 auto;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-position: center;
+    height: 500px;
 }
-.header-title {
-    height: 286px;
+.header__content-area {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
     align-items: center;
+    justify-content: center;
 }
-.h1 {
-    position: relative;  
-    width: 498px;
-    height: 51px;
-    top: -7px;
-    font-family: Lora;
+.header__navigate {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 74px;
+    z-index: 3;
+    width: 100%;
+}
+.main-phrase {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 67%;
+    height: 159px;
+}
+.header__main-title_top {
+    display: flex;
+    font-family: 'Lora', serif;
     font-size: 50px;
-    font-weight: 400;
     line-height: 51px;
+    font-weight: 400;
     letter-spacing: 2px;
-    text-align: center;
-    
+    color: #ffffff;
 }
-.h2 {
-    width: 504px;
-    height: 20px;
-    display: block;
-    font-family: Oxygen;
+.header__main-title_bot {
+    display: flex;
+    font-family: 'Oxygen', sans-serif;
     font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #ffffff;
+    opacity: 0.63;   
+}
+.latest-posts-button__position {
+    display: flex;
+    width: 167px;
+    height: 44px;
+    border-radius: 3px;
+    background: #dd783f;
+    align-items: center;
+    justify-content: center;
+}
+.header__latest-posts-button{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 13px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
-    text-align: center;
-    opacity: 0.63;
- 
+    color: #ffffff;
 }
-.navigation_menu {
+.navigation-menu {
     height: 74px;
     width: 940px;
     margin-left: auto;
@@ -50,20 +83,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;   
 }
-.navigation-menu-elements, .navigation-menu-elements-footer {
+.navigation-list {
     width: 376px;
     display: flex;
     justify-content: space-evenly;
+    list-style-type: none;
 }
-.navigation-menu-elements-footer {
-    color: #FFFFFF;
-    opacity: 0.6;
+.navigate__list-element {
+
 }
-.elementsOfMenu {
+.item_header {
     text-transform: uppercase;
-    font-family: Oxygen;
+    font-family: "Oxygen", sans-serif;
     font-size: 11px;
     font-weight: 400;
     line-height: 20px;
@@ -71,49 +104,38 @@
     text-align: left;
     display: flex;
 }
-
-.escape {
+.header__content-area {
+    color: white;
     display: flex;
-    width: 92px;
-    Height: 26px;
-    Top: 3px;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 26px;
-    font-family: Lora;
-}
-.escape-footer {
-    display: flex;
-    opacity: 0.6;
-    width: 92px;
-    Height: 26px;
-    Top: 3px;
-    color: #ffffff;
-    font-family: Lora;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 26px;
-}
-.main-image img {
     width: 100%;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
 }
-.main-text-poz {
-    width: 960px;
-    height: 1431px;
-    margin-top: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 135px;    
+.categories-menu  {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 100%;
 }
-.main-text {
-    font-family: "Oxygen", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 35px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #101315;
+
+.categories-menu__navigation  {
+    display: flex;
+    width: 67%;
+    justify-content: space-around;
+    align-items: center;
+}
+.categories-menu__element  {
+    
+}
+.main {
+    background: #f7f7f7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .footer {
     position: relative;
