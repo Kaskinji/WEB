@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">     
+    <link href="/styles/post.css" rel="stylesheet">     
     <meta charset="utf-8" />
     <title>The Road Ahead</title>
   </head>
@@ -41,7 +41,7 @@
       <footer class= "footer">
         <div class= "footer-menu">
           <div class= "navigation_menu">
-            <div class= "escape-footer"><img src= "images\Escape-white.svg"></div>              
+            <div class= "escape-footer"><img src= "repos\WEB\images\Escape-white.svg"></div>              
               <ul class= "navigation-menu-elements-footer">   
                 <li class= "elementsOfMenu">home</li>
                 <li class= "elementsOfMenu">categories</li>
