@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    overflow-x: hidden;
+}
+
 .header {
-    background-image: url(images/IMAGE-lab2-desert.jpg);
+    background-image: url(../images/IMAGE-lab2-desert.jpg);
     width: 100%;
     position: relative;
     background-size: 100%;
@@ -13,6 +18,7 @@
     background-position: center;
     height: 500px;
 }
+
 .header__content-area {
     position: relative;
     display: flex;
@@ -22,6 +28,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .header__navigate {
     position: absolute;
     display: flex;
@@ -56,7 +63,8 @@
     font-weight: 400;
     letter-spacing: 0em;
     color: #ffffff;
-    opacity: 0.63;   
+    opacity: 0.63;
+    margin-top: 20px;   
 }
 .header__latest-posts-button {
     font-size: 13px;
@@ -64,11 +72,11 @@
     color: white;
     height: 44px;
     width: 167px;
-    align-items: center;
-    background-color: #DD783F;
+    background-color:#DD783F;
     border-radius: 3px;
     border: none;
-    justify-content: center;
+    margin-left: 160px;
+    margin-top: 20px;
 }
 
 .navigation-menu {
@@ -108,6 +116,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .categories-menu  {
     display: flex;
     background-color: white;
@@ -115,6 +124,10 @@
     align-items: center;
     height: 65px;
     width: 100%;
+}
+
+.categories-menu__element {
+    text-decoration: none;
 }
 
 .categories-menu__navigation  {
@@ -132,6 +145,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .featured-posts_heading {
     display: flex;
     flex-direction: column;
@@ -140,16 +154,19 @@
     width: 100%;
     margin-bottom: 23px;
 }
+
 .heading {
     font-family: 'Oxygen';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 100;
     font-size: 20px;
     color: #2E2E2E;
     letter-spacing: 2px;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
+
 .decorative_line {
     border-radius: 0px;
     height: 2px;
@@ -157,14 +174,16 @@
     width: 188px;
     background: #DEDEDE;
 }
+
 .main-content_featured-posts_area {
-    margin-top: 60px;
+    margin-top: 30px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .main-content_featured-posts__post {
     display: flex;
     flex-direction: column;
@@ -178,11 +197,11 @@
     width: 67%;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    
+    align-items: center;    
 }
+
 .featured-posts_post1 {
-    background-image: url(WEB/images/post1-lb2.jpg);
+    background-image: url(../images/post1-lb2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 460px;
@@ -197,7 +216,7 @@
 }
 
 .featured-posts_post2 {
-    background-image: url(images/post2-lb2.jpg);
+    background-image: url(../images/post2-lb2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 460px;
@@ -243,6 +262,7 @@
     font-size: 12px;
     color: rgba(255, 255, 255, 0.7);
 }
+
 .icon-place {
     margin-right: 10px;
     width: 26px;
@@ -252,17 +272,16 @@
 }
 
 .icon1 {
-    background-image: url(images/icon1.jpg);
+    background-image: url(../images/icon1.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .icon2 {
-    background-image: url(images/icon2.jpg);
+    background-image: url(../images/icon2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
-
 
 .main-content_featured-posts__post_tag {
     display: flex;
@@ -281,6 +300,9 @@
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    z-index: 1;
 }
 
 .main-content_featured-posts__post__author__data {
@@ -291,6 +313,7 @@
     justify-content: space-between;
     margin-bottom: 15px;
 }
+
 .untagged{
     margin-top: 157px;
 }
@@ -407,9 +430,10 @@
     z-index: 1;
     height: 90px;
     background-size: 100%;
-    background-image: url("images/img-footer.jpg");
+    background-image: url(../images/img-footer.jpg);
     background-repeat: no-repeat;
 }
+
 .footer-menu {
     position: relative;
     z-index: 2;
