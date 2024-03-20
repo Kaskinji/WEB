@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -10,7 +11,7 @@
 </head>
   <body>
     <header class="header">
-      <div class="header__navigate">
+      <div class="header__navigation">
         <div class="navigation-menu">
             <img src="images\Escape-white.svg" alt="logo-top">
             <nav class="navigation-list">
@@ -25,9 +26,7 @@
         <div class="main__phrase">
           <span class="header__main-title_top">Let's do it together.</span>
           <span class="header__main-title_bot">We travel the world in search of stories. Come along for the ride.</span>
-          
-            <button class="header__latest-posts-button">View Latest Posts</button>    
-            
+          <button class="header__latest-posts-button">View Latest Posts</button>    
         </div>  
       </div>    
     </header>
@@ -44,10 +43,8 @@
       <div class="main">
         <section class="main-content_featured-posts">
           <div class="featured-posts_heading">
-            <div>
               <h2 class="heading">Featured Posts</h2>
-            </div>
-            <div class="decorative_line">&nbsp;</div>
+              <div class="decorative_line">&nbsp;</div>
           </div>
           <div class="main-content_featured-posts_area">
             <article class="main-content_featured-posts__post featured-posts_post1">
@@ -256,7 +253,9 @@
     <footer class="footer">
       <div class="navigate-footer">
         <div class="navigation-menu">
-            <img src="images/Escape-white.svg" alt="logo-top">
+            <div class="escape-down">
+                <img src="images/Escape-white.svg" alt="logo-top">
+            </div>    
             <nav class="navigation-list">
                 <a href="#" class="navigate__list-element"><span class="item_header">home</span></a>
                 <a href="#" class="navigate__list-element"><span class="item_header">categories</span></a>
