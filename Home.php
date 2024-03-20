@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>LW2</title>
-    <link rel="stylesheet" href="styles/Home.css">
+    <link rel="stylesheet" href="/styles/Home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
@@ -254,7 +254,7 @@
       <div class="navigate-footer">
         <div class="navigation-menu">
             <div class="escape-down">
-                <img src="images/Escape-white.svg" alt="logo-top">
+                <img src="/static/images/Escape-white.svg" alt="logo-top">
             </div>    
             <nav class="navigation-list">
                 <a href="#" class="navigate__list-element"><span class="item_header">home</span></a>
