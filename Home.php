@@ -254,7 +254,7 @@
       <div class="navigate-footer">
         <div class="navigation-menu">
             <div class="escape-down">
-                <img src="/static/images/Escape-white.svg" alt="logo-top">
+                <img src="images\Escape-white.svg" alt="logo-top">
             </div>    
             <nav class="navigation-list">
                 <a href="#" class="navigate__list-element"><span class="item_header">home</span></a>
