@@ -26,7 +26,7 @@
         </div>        
       </header>
       <div class= "main-image">
-        <img src= "static/images/IMAGE.jpg" alt= "main-image">
+        <img src= "WEB/images/IMAGE.jpg" alt= "main-image">
       </div>    
       <div class= "main-text-poz">
         <div class= "main-text">
@@ -41,7 +41,7 @@
       <footer class= "footer">
         <div class= "footer-menu">
           <div class= "navigation_menu">
-            <div class= "escape-footer"><img src= "static/images/Escape-white.svg"></div>              
+            <div class= "escape-footer"><img src= "WEB/images/Escape-white.svg"></div>              
               <ul class= "navigation-menu-elements-footer">   
                 <li class= "elementsOfMenu">home</li>
                 <li class= "elementsOfMenu">categories</li>
