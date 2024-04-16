@@ -1,16 +1,89 @@
 <?php
-$posts = [
+$featured_posts = [
  [
+   'id' => 1, 
    'title' => 'The Road Ahead',
-   'subtitle' => '',
-   'img_modifier' => '',
-   'author' => '',
-   // другие свойства этого поста
+   'subtitle' => 'The road ahead might be paved - it might not be.',
+   'background_path' => 'images/post1-lb2.jpg',
+   'author_photo_path' => 'images/icon1.jpg',
+   'author_info' => 'Mat Vogels',
+   'author' => 'Me',
+   'post_date' => 1443139200
  ],
+
  [
-   // свойства второго поста
+   'id' => 2, 
+   'title' => 'From Top Down',
+   'subtitle' => 'Once a year, go someplace you’ve never been before.',
+   'background_path' => 'images/post2-lb2.jpg',
+   'author_photo_path' => 'images/icon2.jpg',
+   'author_info' => 'William Wong',
+   'author' => 'Me',
+   'post_date' => 1443139200
  ],
 ];
+
+$posts = [
+[
+    'id' => 3, 
+   'title' => 'Still Standing Tall',
+   'subtitle' => 'Life begins at the end of your comfort zone.',
+   'background_path' => 'images/most-recent-post1.jpg',
+   'author_photo_path' => 'images/icon2.jpg',
+   'author_info' => 'William Wong',
+   'post_date' => 1443139200
+],
+
+[
+    'id' => 4, 
+   'title' => 'Sunny Side Up',
+   'subtitle' => 'No place is ever as bad as they tell you it`s going to be.',
+   'background_path' => 'images/most-recent-post2.jpg',
+   'author_photo_path' => 'images/icon1.jpg',
+   'author_info' => 'Mat Vogels',
+   'post_date' => 1443139200
+],
+
+[
+    'id' => 5, 
+   'title' => 'Water Falls',
+   'subtitle' => 'We travel not to escape life, but for life not to escape us.',
+   'background_path' => 'images/most-recent-post3.jpg',
+   'author_photo_path' => 'images/icon2.jpg',
+   'author_info' => 'Mat Vogels',
+   'post_date' => 1443139200
+],
+
+[
+    'id' => 6, 
+   'title' => 'Through the Mist',
+   'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
+   'background_path' => 'images/most-recent-post4.jpg',
+   'author_photo_path' => 'images/icon2.jpg',
+   'author_info' => 'William Wong',
+   'post_date' => 1443139200
+],
+
+[
+    'id' => 7, 
+   'title' => 'Awaken Early',
+   'subtitle' => 'Not all those who wander are lost.',
+   'background_path' => 'images/most-recent-post5.jpg',
+   'author_photo_path' => 'images/icon1.jpg',
+   'author_info' => 'Mat Vogels',
+   'post_date' => 1443139200
+],
+
+[
+    'id' => 8, 
+   'title' => 'Try it Always',
+   'subtitle' => 'The world is a book, and those who do not travel read only one page.',
+   'background_path' => 'images/most-recent-post6.jpg',
+   'author_photo_path' => 'images/icon1.jpg',
+   'author_info' => 'Mat Vogels',
+   'post_date' => 1443139200
+]
+]
 ?>
 
 <!DOCTYPE html>
@@ -55,52 +128,19 @@ $posts = [
         </nav>  
       </div>
       <div class="main">
+        
         <section class="main-content_featured-posts">
           <div class="featured-posts_heading">
               <h2 class="heading">Featured Posts</h2>
               <div class="decorative_line">&nbsp;</div>
           </div>
-          <div class="main-content_featured-posts_area">
-            <article class="main-content_featured-posts__post featured-posts_post1">
-              <div class="main-content_featured-posts__post_content untagged">
-                  <h3 class="main-content_featured-posts__post_content__article-name">The road Ahead</h3>
-                  <p class="main-content_featured-posts__post_content__acticle-content ">The road ahead might be
-                      paved
-                      - it might not be.</p>
-                  <div class="main-content_featured-posts__post__author">
-                      <div class="icon-place icon1">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_featured-posts__post__author__data">
-                          <div class="main-content_featured-posts__post__author__name">Mat Vogels</span>
-                          </div>
-                          <div class="main-content_featured-posts__post__author__date">September 25, 2015</span></div>
-                      </div>
-                  </div>
-              </div>
-          </article>
 
-            <article class="main-content_featured-posts__post featured-posts_post2">
-              <div class="main-content_featured-posts__post_tag">
-                  <button type="button" class="main-content_featured-posts__post_button">ADVENTURE</button>
-              </div>
-              <div class="main-content_featured-posts__post_content tagged">
-                  <h3 class="main-content_featured-posts__post_content__article-name">From Top Down</h3>
-                  <p class="main-content_featured-posts__post_content__acticle-content">Once a year, go someplace
-                      you’ve never been before.</p>
-                  <div class="main-content_featured-posts__post__author">
-                      <div class="icon-place icon2">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_featured-posts__post__author__data">
-                          <div class="main-content_featured-posts__post__author__name">William Wong</span>
-                          </div>
-                          <div class="main-content_featured-posts__post__author__date">September 25, 2015</span></div>
-                      </div>
-                  </div>
-              </div>
-          </article>
-          </div>
+          <?php
+            foreach ($featured_posts as $featured_post) {
+                include 'featured_post_preview.php';
+            }
+          ?>
+          
         </section>
         <section class="main-content_most-resent-posts">
           <div class="main-content_most-resent-posts_heading">
@@ -109,160 +149,14 @@ $posts = [
               </div>
               <div class="decotative_line">&nbsp;</div>
           </div>
-          <article class="main-content_most-resent-posts__post">
-              <div class="main-content_most-resent-posts__post__image">
-                  <img src="images/most-recent-post1.jpg" alt="img">
-              </div>
-              <div class="main-content_most-resent-posts__post__content">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name">Still Standing Tall</h3>
-                      <p class="main-content_most-resent-posts__post__article-content">Life begins at the end of your
-                          comfort zone.</p>
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author">
-                      <div class="icon-place icon2">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_most-resent-posts__post__author__info-area">
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__name">William Wong</span>
-                          </div>
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__date">9/25/2015</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </article>
-          <article class="main-content_most-resent-posts__post">
-              <div class="main-content_most-resent-posts__post__image">
-                  <img src="images/most-recent-post2.jpg" alt="img">
-              </div>
-              <div class="main-content_most-resent-posts__post__content">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name">Sunny Side Up</h3>
-                      <p class="main-content_most-resent-posts__post__article-content">No place is ever as bad as they
-                          tell you it’s going to be.</p>
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author">
-                      <div class="icon-place icon1">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_most-resent-posts__post__author__info-area">
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__name">Mat Vogels</span>
-                          </div>
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__date">9/25/2015</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </article>
-          <article class="main-content_most-resent-posts__post">
-              <div class="main-content_most-resent-posts__post__image">
-                  <img src="images/most-recent-post3.jpg" alt="img">
-              </div>
-              <div class="main-content_most-resent-posts__post__content">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name">Water Falls</h3>
-                      <p class="main-content_most-resent-posts__post__article-content">We travel not to escape life,
-                          but for life not to escape us.</p>
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author">
-                      <div class="icon-place icon1">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_most-resent-posts__post__author__info-area">
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__name">Mat Vogels</span>
-                          </div>
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__date">9/25/2015</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </article>
-          <article class="main-content_most-resent-posts__post">
-              <div class="main-content_most-resent-posts__post__image">
-                  <img src="images/most-recent-post4.jpg" alt="img">
-              </div>
-              <div class="main-content_most-resent-posts__post__content">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name">Through the Mist</h3>
-                      <p class="main-content_most-resent-posts__post__article-content">Travel makes you see what a
-                          tiny place you occupy in the world.</p>
-                  </div>
-              </div>
-              <div class="main-content_most-resent-posts__post__author">
-                  <div class="icon-place icon2">
-                      &nbsp;
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author__info-area">
-                      <div>
-                          <span class="main-content_most-resent-posts__post__author__name">William Wong</span>
-                      </div>
-                      <div>
-                          <span class="main-content_most-resent-posts__post__author__date">9/25/2015</span>
-                      </div>
-                  </div>
-              </div>
 
-          </article>
-          <article class="main-content_most-resent-posts__post">
-              <div class="main-content_most-resent-posts__post__image">
-                  <img src="images/most-recent-post5.jpg" alt="img">
-              </div>
-              <div class="main-content_most-resent-posts__post__content">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name">Awaken Early</h3>
-                      <p class="main-content_most-resent-posts__post__article-content">Not all those who wander are
-                          lost.</p>
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author">
-                      <div class="icon-place icon1">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_most-resent-posts__post__author__info-area">
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__name">Mat Vogels</span>
-                          </div>
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__date">9/25/2015</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </article>
-          <article class="main-content_most-resent-posts__post">
-              <div class="main-content_most-resent-posts__post__image">
-                  <img src="images/most-recent-post6.jpg" alt="img">
-              </div>
-              <div class="main-content_most-resent-posts__post__content">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name">Try it Always</h3>
-                      <p class="main-content_most-resent-posts__post__article-content">The world is a book, and those
-                          who do not travel read only one page.</p>
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author">
-                      <div class="icon-place icon1">
-                          &nbsp;
-                      </div>
-                      <div class="main-content_most-resent-posts__post__author__info-area">
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__name">Mat Vogels</span>
-                          </div>
-                          <div>
-                              <span class="main-content_most-resent-posts__post__author__date">9/25/2015</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </article>
-      </section>
+          <?php
+            foreach ($posts as $post) {
+                include 'most_recent_post_preview.php';
+            }
+          ?>
 
-      </div>
+        </section>
       </div>
     <footer class="footer">
       <div class="navigate-footer">
