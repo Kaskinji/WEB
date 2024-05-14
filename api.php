@@ -13,7 +13,7 @@ saveImage($dataAsArray['image']);
       $imageBase64Array = explode(';base64,', $imageBase64);
       $imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
       $imageDecoded = base64_decode($imageBase64Array[1]);
-      saveFile("static/image.{$imgExtention}", $imageDecoded);
+      saveFile("image.{$imgExtention}", $imageDecoded);
   }
 
 function saveFile(string $file, string $data): void {
