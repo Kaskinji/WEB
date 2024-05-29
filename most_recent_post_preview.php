@@ -1,18 +1,23 @@
-    
-        <article class="main-content_most-resent-posts__post" >
-              <img class="main-content_most-resent-posts__post__image" src="<?= $post['background_path'] ?>" alt="img">
-                  <div class="main-content_most-resent-posts__post__article">
-                      <h3 class="main-content_most-resent-posts__post__article-name"><?= $post['title'] ?></h3>
-                      <p class="main-content_most-resent-posts__post__article-content"><?= $post['subtitle'] ?></p>
-                  </div>
-                  <div class="main-content_most-resent-posts__post__author">                      
-                      <div class="main-content_most-resent-posts__post__author__data">
-                        <div class='autor-info'>                    
-                          <img class="icon" src="<?= $post['author_photo_path'] ?>" alt = "img">
-                          <div class="main-content_most-resent-posts__post__author__name"><?= $post['author_info'] ?></div>                         
-                        </div>                                                                      
-                          <div class="main-content_most-resent-posts__post__author__date"><?= date("m/d/Y", $post['post_date']) ?></div>                       
-                      </div>
-                  </div>          
-              <a class="post_link" href='/post.php?id=<?= $post['id'] ?>'></a>
-        </article>
+<article class="most-recent__item">
+    <img class="most-recent__item_img" src="<?= $post['image_url'] ?>" alt="img">
+    <div class="most-recent__item_content-area">
+        <h3 class="most-recent__main-txt">
+            <?= $post['title'] ?>
+        </h3>
+        <span class="most-recent__bot-txt">
+            <?= $post['subtitle'] ?>
+        </span>
+        <div class="most-recent__item_author-info">
+            <div class="most-recent__author-info">
+                <img class="author-info__img" src="<?= $post['author_url'] ?>" alt="img">
+                <span class="most-recent__author-info_txt">
+                    <?= $post['author'] ?>
+                </span>
+                <span class="most-recent__author-info_date">
+                    <?= $post['publish_date'] ?>
+                </span>
+            </div>
+        </div>
+    </div>
+    <a class="post_link" href='/post.php?id=<?= $post['post_id'] ?>'><span></span></a>
+</article>
