@@ -1,21 +1,23 @@
 const titleInput = document.getElementById('title');
 const subtitleInput = document.getElementById('description');
 const authorNameInput = document.getElementById('author-name');
+const authorImageInput = document.getElementById('author-photo');
 const dateInput = document.getElementById('post-date');
 const bigImageInput = document.getElementById('big-image');
 const smallImageInput = document.getElementById('small-image');
-const authorImageInput = document.getElementById('author-photo');
+
+
 const FormDatas = {
-  "title": '',
-  "subtitle": '',
-  "content": '',
-  "author": '',
-  "author_url": '',
-  "publish_date": '',
-  "image_url": '',
-  "featured": '',
-  "tag_type": '',
-  "tag_text": '',
+    title: "",
+    description: "",
+    author: "",
+    publish_date: "",
+    image_url: "", 
+    author_photo: "", 
+    content: "",
+    featured: "0",
+    tag_type: "",
+    tag_text: ""
 }
 
 titleInput.addEventListener('change', () => CopyText(titleInput, 'article-title-copy'));
@@ -35,7 +37,6 @@ bigImageInput.addEventListener('change', () => UpdateArticlePreview());
 smallImageInput.addEventListener('change', () => copyImage(smallImageInput, 'post-card-preview'));
 smallImageInput.addEventListener('change', () => copyImage(smallImageInput, 'small-photo-main'));
 smallImageInput.addEventListener('change', () => UpdatePostCardPreview());
-
 
 authorImageInput.addEventListener('change', () => copyImage(authorImageInput, 'author-preview-photo'));
 authorImageInput.addEventListener('change', () => copyImage(authorImageInput, 'author-photo-main'));
@@ -207,28 +208,31 @@ function ValidateForm() {
 }
 
 function displayFormData(form) {
-    const formData = new FormData(document.getElementById(form));
+    const formData = new FormData(document.getElementById("main-form"));
     for (const [key, value] of formData.entries()) {
         if (value instanceof File) {
-            readAndDisplayFile(value);
+            readAndDisplayFile(key, value);
         } else {
+            //console.log(`${key}: ${value}`);
             FormDatas[key] = value;
-            
         }
     }
-    console.log(FormDatas) 
+    sendForm(FormDatas); 
 }
 
-function readAndDisplayFile(file) {
+function readAndDisplayFile(k, file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-        console.log(`${file.name}: ${e.target.result}`);
+        //console.log(`${file.name}: ${e.target.result}`);
+        FormDatas[k] = e.target.result;
     };
     reader.readAsDataURL(file);
 }
 
-
-const button = document.querySelector('.publish-button');
-button.addEventListener('click', () => {
-    ValidateForm();
-})
+async function sendForm(data) {
+    const res = await fetch('./api.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    });
+}

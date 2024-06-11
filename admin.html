@@ -36,7 +36,7 @@
                     <h1 class="new-post-text">New Post</h1>
                     <p class="new-post-description-text">Fill out the form bellow and publish your article</p>
                 </div>
-                <button type="button" class="publish-button">Publish</button>
+                <button type="button" class="publish-button" onclick="ValidateForm()">Publish</button>
             </div>
     
         <div id="error" class="error-block">
@@ -85,11 +85,13 @@
                             <div id="delete-photo" class="input-field__delete-block_camera">
 
                                 <label class="delete-block_new-label" for="author-photo">
-                                    <div class="new-label_camera">Upload New</div>                                
+                                    <div class="new-label_camera"></div>
+                                    Upload New                                
                                 </label>
 
                                 <label id="delete-author" class="delete-block_clear-label" onclick="RemoveAuthorImage()">
-                                    <div class="new-label_trash-can">Remove</div>                              
+                                    <div class="new-label_trash-can"></div> 
+                                    Remove                             
                                 </label>
 
                             </div>
@@ -207,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-information-wrapper">
+        <div class="main-information-block">
             <h2 class="header2">Content</h2>
             <form id="content-form">
                 <label class="label-text" for="post-content">Post content (plain text)</label>
